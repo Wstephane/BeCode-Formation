@@ -13,9 +13,9 @@ Fait et fini en *+ou-6h* de temps imparti.
 * Choisir un template en fonction des besoins de site à faire.
 * A modifier un template pour qu'il s'adapte à mes besoins.
 * Tester [Light House Test](https://developers.google.com/web/tools/lighthouse/)
-* A intégrer des icones du site.
-* Gérer mon temps et arriver à un résultat sastifaisant sans qu'il soit parfait.
-* Aider par la même occasion mes partenaires à être plus synthétique sur leur projet.
+* A intégrer des icones du site. [Font Awesome](https://fontawesome.com/)
+* Gérer mon temps et arriver à un résultat satisfaisant sans qu'il ne soit parfait.
+* Aider par la même occasion mes partenaires à être plus synthétique dans leur projet.
 
 
 ## J'ai rencontrer les problèmes suivant :
