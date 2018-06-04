@@ -1,9 +1,9 @@
 body {
   background-color: blue;
-}
-
-#small, #medium {
-  display: none;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 110%;
+  display: flex;
+  flex-direction: row;
 }
 
 @media only screen and (max-width: 300px) {
@@ -12,20 +12,17 @@ body {
   }
   #small {
     display: inline-block;
-  }
-  #medium, #large {
-    display: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 125%;
   }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 768px){
+@media only screen and (min-width: 300px) and (max-width: 768px) {
   body {
     background-color: green;
-  }
-  #medium {
-    display: inline-block;
-  }
-  #small, #large {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 2fr, 1fr;
   }
 }
