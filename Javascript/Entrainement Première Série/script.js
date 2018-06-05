@@ -35,3 +35,12 @@
 
 
 // Excercice 5
+
+
+// var nombre1 = prompt("Donnez moi deux nombres à virgule.");
+//
+// var nombre2 = prompt("Donnez moi deux nombres à virgule.");
+//
+// var resultat = parseInt(nombre1);
+//
+// alert(resultat * nombre2);
