@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_7</title>
+        <meta charset="UTF-8">
+        <script src="script3.js"></script>
+    </head>
+    <body>
+        <form id="onSubmit">
+            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+            <button id="valider" name="valider" type="submit">Valider</button>
+        </form>
+    <script>
+      var onSubmit = document.getElementById("onSubmit");
+
+      onSubmit.addEventListener("submit",function(e) {
+        resultat();
+          e.preventDefault();
+
+      });
+
+        function resultat() {
+           let pointure = document.getElementById('pointure').value;
+           console.log(pointure);
+            pointure = parseInt(pointure);
+
+
+          var annee = document.getElementById('annee').value;
+
+          var calcul =  2 + 5 + pointure ;
+          console.log(calcul);
+          // alert();
+      }
+
+          // resultat();
+
+    </script>
+    </body>
+</html>
