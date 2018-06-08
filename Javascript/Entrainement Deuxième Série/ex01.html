@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcul</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="Calculer la surface d'un rectangle" id="surfaceRectangle">
+        <input type="button" value="Calculer le périmètre d'un rectangle" id="periRectangle">
+    </form>
+
+    <script>
+        document.getElementById("surfaceRectangle").addEventListener("click", calculersurfaceRectangle);
+        document.getElementById("periRectangle").addEventListener("click", calculeperiRectangle);
+
+        function calculersurfaceRectangle () {
+            var largeur = prompt("largeur");
+            var longueur = prompt("longueur");
+            var surface = largeur * longueur;
+            alert("la surface est : " + surface + "m²");
+        }
+
+        function calculeperiRectangle () {
+            var largeur = prompt("largeur");
+            var longueur = prompt("longueur");
+            var total = parseInt(largeur) + parseInt(longueur);
+            alert("la perimétre est : " + total + "m³");
+        }
+
+    </script>
+</body>
+</html>
