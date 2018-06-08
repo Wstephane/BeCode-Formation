@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_8</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
+            <button id="valider" name="valider">Valider</button>
+        </form>
+    <script>
+    
+        var a = document.getElementById("age");
+
+        function minmaj (a) {
+            if (a < 18) {
+            return ("Vous êtes majeur");
+
+            } else {
+            return ("Vous êtes mineur");
+            }
+        }
+        
+        alert(minmaj(a));
+
+    </script>
+    </body>
+</html>

@@ -12,6 +12,9 @@
             <button id="valider" name="valider" type="submit">Valider</button>
         </form>
     <script>
+
+    // Excercice 7 première série
+
       var onSubmit = document.getElementById("onSubmit");
 
       onSubmit.addEventListener("submit",function(e) {
@@ -28,13 +31,10 @@
 
           var annee = document.getElementById('annee').value;
 
-          var calcul =  2 + 5 + pointure ;
+          var calcul = (pointure * 2) + 5 * 50 - annee + 1766;
+
           console.log(calcul);
-          // alert();
       }
-
-          // resultat();
-
     </script>
     </body>
 </html>
