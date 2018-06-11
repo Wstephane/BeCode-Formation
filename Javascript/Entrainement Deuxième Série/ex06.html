@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ex05</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+     <form>
+         <input type="button" value="resultat" id="appelFunction">
+     </form>
+
+    <script>
+        document.getElementById("appelFunction").addEventListener("click", affiche);
+        var tab = [-2, 1, 4];
+        
+        function soustraire (x) {
+            return x - 2;
+
+            if (x > 0) {
+                return "x - 2"
+            } else {
+                return "Nombre Négatif"
+            }
+        }
+
+        function affiche () {
+            alert("Premier calcule = " + soustraire (tab[0]));
+            alert("Deuxième calcule = " + soustraire (tab[tab.length -1]));
+        }
+
+    </script>
+
+</body>
+</html>
