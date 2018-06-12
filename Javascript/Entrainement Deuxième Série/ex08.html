@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Excercice 08 Deuxième Vague</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form>
+        <input type="button" value="Déclenchez moi SVP !" id="appelFunction">
+    </form>
+
+    <script>
+         document.getElementById("appelFunction").addEventListener("click",jourDeLaSemaine);
+
+        function jourDeLaSemaine() {
+            var jour = prompt("Quel jour de la semaine sommes nous ?");
+            switch (jour) {
+                case "Lundi" :
+                    console.log("C'est Lundi");
+                    break;
+                case "Mardi" :
+                    console.log("C'est Mardi !");
+                    break;
+                case "Mercredi" :
+                    console.log("C'est Mercredi !");
+                    break;
+                case "Jeudi" :
+                    console.log("C'est Jeudi !");
+                    break;
+                case "Vendredi" :
+                    console.log("C'est Vendredi !");
+                    break;
+                case "Samedi" :
+                    console.log("C'est Samedi !");
+                    break;
+                case "Dimanche" :
+                    console.log("C'est Dimanche !");
+                    break;
+                default :
+                    console.log("C'est Lundi !");
+            }
+        }
+
+    </script>
+</body>
+</html>
