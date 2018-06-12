@@ -15,31 +15,36 @@
          document.getElementById("appelFunction").addEventListener("click",jourDeLaSemaine);
 
         function jourDeLaSemaine() {
-            var jour = prompt("Quel jour de la semaine sommes nous ?");
-            switch (jour) {
-                case "Lundi" :
-                    console.log("C'est Lundi");
-                    break;
-                case "Mardi" :
-                    console.log("C'est Mardi !");
-                    break;
-                case "Mercredi" :
-                    console.log("C'est Mercredi !");
-                    break;
-                case "Jeudi" :
-                    console.log("C'est Jeudi !");
-                    break;
-                case "Vendredi" :
-                    console.log("C'est Vendredi !");
-                    break;
-                case "Samedi" :
-                    console.log("C'est Samedi !");
-                    break;
-                case "Dimanche" :
+            var jour;
+            switch (new Date(). getDay()) {
+                case 0:
+                    day = "Dimanche";
                     console.log("C'est Dimanche !");
                     break;
-                default :
-                    console.log("C'est Lundi !");
+                case 1:
+                    day = "Lundi";
+                    console.log("C'est Lundi");
+                    break;
+                case 2:
+                    day = "Mardi";
+                    console.log("C'est Mardi !");
+                    break;
+                case 3:
+                    day = "Mercredi";
+                    console.log("C'est Mercredi !");
+                    break;
+                case 4:
+                    day = "Jeudi";
+                    console.log("C'est Jeudi !");
+                    break;
+                case 5:
+                    day = "Vendredi";
+                    console.log("C'est Vendredi !");
+                    break;
+                case 6:
+                    day = "Samedi";
+                    console.log("C'est Samedi !");
+                    break;
             }
         }
 
