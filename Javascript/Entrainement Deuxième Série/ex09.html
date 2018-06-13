@@ -19,8 +19,14 @@
         var a = prompt("Donnez moi un mot avec au moins un P dedans svp");
         var b = a.indexOf("p");
         console.log(b);
-      }
 
+        while (b < 0) {
+
+        a = prompt("Donnez moi un mot avec au moins un P dedans svp");
+        b = a.indexOf("p");
+        }
+        alert(a);
+      }
       
     </script>
     
