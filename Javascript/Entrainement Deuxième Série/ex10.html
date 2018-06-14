@@ -16,13 +16,15 @@
 
       function somme () {
         
+        var mk = 0;
+
         for (var i = 0; i < 3; i++) {
-            var number = prompt("Donnez moi un nombre svp");
-            console.log(number);
-            eval(number);
+            var number = (parseInt(prompt("Donnez moi un nombre svp")));
+            var mk = mk + number;
+            console.log(mk);
         }
       }
-      
+
     </script>
     
 </body>
