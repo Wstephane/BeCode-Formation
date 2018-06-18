@@ -12,11 +12,27 @@
     </form>
 
     <script>
-      document.getElementById("appelFunction").addEventListener("click", calculMoyenne);
+        document.getElementById("appelFunction").addEventListener("click", calculMoyenne);
 
         function calculMoyenne () {
-            var a = prompt("Donnez moi un nombre entier svp");
-        
+            let nombreEntier = Number(prompt("Donnez moi un nombre entier svp"));
+            while (isNaN(nombreEntier)) {
+                alert("Error");
+                nombreEntier = Number(prompt("Donnez moi un nombre entier svp"));
+            }
+            let resultat = 0;
+            let i = 0;
+            while (nombreEntier >= 0) {
+                resultat += nombreEntier;
+                i++;
+                nombreEntier = Number(prompt("Donnez moi un nombre entier svp"));
+                    while (isNaN(nombreEntier)) {
+                    alert("Error");
+                    nombreEntier = Number(prompt("Donnez moi un nombre entier svp"));
+                }
+            }
+                alert("Nombre de valeur entrée : " + i);
+                alert("Moyenne " + resultat / i);
 
         }
 
