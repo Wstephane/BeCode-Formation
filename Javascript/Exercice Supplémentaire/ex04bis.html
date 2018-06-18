@@ -14,10 +14,15 @@
     <script>
         document.getElementById("appelFunction").addEventListener("click", affiche);
 
-        var tab = [-2, 1, 4];
+        let tab = [-2, 1, 4];
 
-        function additionne (x) {
-            x 
+        function additionne(x) {
+            return x + 2;
+        }
+
+        function affiche() {
+            alert(additionne(tab[0]));
+            alert(additionne(tab[tab.length-1]));
         }
 
 

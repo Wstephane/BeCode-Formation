@@ -14,19 +14,17 @@
     <script>
         document.getElementById("appelFunction").addEventListener("click", affiche);
 
-        var a = 3;
-        var b = 2;
+        let a = 3;
+        let b = 2;
 
         function triple (x) {
             return x * 3;
         }
 
         function affiche () {
-            resultat = triple(a);
-            alert(resultat);
+            alert(triple(a));
 
-            resultat2 = triple(b);
-            alert(resultat2);
+            alert(triple(b));
             
         }
 
