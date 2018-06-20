@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercice 12 Deuxième série</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form>
+         <input type="button" value="Déclenchez moi SVP !" id="appelFunction">
+    </form>
+
+    <script>
+        document.getElementById("appelFunction").addEventListener("click", calculeIMC);
+
+
+        function calculeIMC () {
+
+            var poids = parseFloat(prompt("Donnez moi un poids svp"));
+            var taille = parseFloat(prompt("Donnez moi une taille svp"));
+            var imc = poids / (taille * taille);
+            alert("Votre IMC est " + imc.toFixed(2));
+
+            if (imc < 16.5) {
+                return alert("Vous êtes en catégorie : dénutrition ou famine");
+            } else if (imc > 16.5 && imc < 18.5) {
+                return alert("Vous êtes en catégorie : maigreur");
+            } else if (imc > 18.5 && imc < 25) {
+                return alert("Vous êtes en catégorie : corpulence normale ");
+            } else if (imc > 25 && imc < 30) {
+                return alert("Vous êtes en catégorie : surpoids");
+            } else if (imc > 30 && imc < 35) {
+                return alert("Vous êtes en catégorie : obésité modérée");
+            } else if (imc > 35 && imc < 40) {
+                return alert("Vous êtes en catégorie : obésité sévère");
+            } else {
+                return alert("Vous êtes en catégorie : obésité morbide");
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
