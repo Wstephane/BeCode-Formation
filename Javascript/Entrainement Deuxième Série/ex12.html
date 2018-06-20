@@ -14,8 +14,47 @@
     <script>
         document.getElementById("appelFunction").addEventListener("click", conversionTemperature);
 
+
         function conversionTemperature () {
-            var choixConv = prompt("Choisissez un type de conversion");
+            do {
+                var choixConv = parseInt(prompt("Choisissez un chiffre pour avoir la bonne conversion \n Menu : \n 0. Fin du programme \n 1. De Celsius vers Fahrenheit \n 2. De Celsius vers Kelvin \n 3. De Fahrenheit vers Celsius \n 4. De Fahrenheit vers Kelvin \n 5. De Kelvin vers Celsius \n 6. De Kelvin vers Fahrenheit"));
+
+            } while (choixConv < 0 || choixConv > 6 || isNaN(choixConv));
+
+            if (choixConv != 0) {
+
+            do { 
+            var choixTemp = parseInt(prompt("Donnez nous une température à convertir"));
+
+            } while (isNaN(choixTemp));
+
+            }
+
+            switch (choixConv) {
+                case 0:
+                    alert("Fin de programme");
+                    break;
+                case 1:
+                    alert((choixTemp * 9/5) + 32);
+                    break;
+                case 2:
+                    alert(choixTemp + 273.15);
+                    break;
+                case 3:
+                    alert((choixTemp - 32) / (9/5));
+                    break;
+                case 4:
+                    alert((choixTemp - 32) * (5/9) + 273.15);
+                    break;
+                case 5:
+                    alert(choixTemp - 273.15);
+                    break;
+                case 6:
+                    alert((choixTemp * 9/5) - 459.67);
+                    break;
+                default:
+                    alert("Error");
+            }
 
         }
 
