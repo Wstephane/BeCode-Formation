@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 3</title>
+</head>
+<body>
+  <form id="onSubmit">
+    <label for="nom">Votre nom  : </label>
+    <input type="text" name="nom" value="" id="nom" />
+  </form>
+  <script>
+        var onSubmit = document.getElementById("onSubmit");
+
+        onSubmit.addEventListener("submit",function(e) {
+        e.preventDefault();
+        BoiteValeur();
+        });
+
+        function BoiteValeur () {
+          let Valeur = document.getElementById("nom");
+          alert(Valeur.value);
+        }
+
+  </script>
+</body>
+</html>
