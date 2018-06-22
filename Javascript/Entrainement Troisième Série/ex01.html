@@ -5,11 +5,12 @@
     <title>Exercice 1</title>
   </head>
   <body>
-      <img onmouseover="" src="images/image1.jpg" id="image1" />
+      <img src="Image-Ex1/image1.jpg" id="image1" />
   </body>
   <script>
-
-        Document.getElementById("image1").src = "image1_2.jpg";
-
+        let move = document.getElementById("image1");
+        move.addEventListener("mouseover", function() {
+          move.src = "Image-Ex1/image1_2.jpg";
+        });
   </script>
 </html>
