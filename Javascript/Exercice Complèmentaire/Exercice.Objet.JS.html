@@ -9,16 +9,34 @@
 </body>
   <script>
 
+    // Exercice PNJ
+      
     let character = {
     "name" : "Monsieur Patate",
-    "age" : "35",
-    "item to give" : ["Un pendentif", "une amulet", "un anneau"],
+    "age" : 35,
+    "item_to_give" : ["Un pendentif", "une amulet", "un anneau"],
     afficher : function () {
-    for (x in character) {
-        console.log(x);
+        for (x in character) {
+            console.log(x);
         }
+    },
+    giveItem : function () {
+      let giveItemAleatoire = item_to_give[Math.floor(Math.random(2)*item_to_give.length)];
+
     }
 };
 character.afficher();
+character.giveItem();
+
+    // Exercice Shop
+
+    let objetàVendre = {"title" : "Epée du Grand Tagazok", "physic" : 15, "magic" : 5, "minLevel" : 7, "available" : true},
+        {"title" : "La Hache de Grock le cogneur", "physic" : 30, "magic" : 0, "minLevel" : 10, "available" : true},
+
+
+    // Exercice Personnage
+
+
+
   </script>
 </html>
