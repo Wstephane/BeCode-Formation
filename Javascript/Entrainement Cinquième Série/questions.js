@@ -4,57 +4,50 @@
  * Il peut y avoir plusieur façon de faire.
  */
 var tailleString = function (texte) {
-    return "Ce texte à une certaine taille".length;
+    return texte.length;
     // Ok
 }
 var remplaceECar = function (texte) {
-    "Ce texte à une certaine taille".length;
+    return texte.slice(1, 6);
    
 }
 var concatString = function (texte1, texte2) {
-    return a = "Le javascript est "+ "super";
+    return a = texte1 + texte2;
     // Ok
 }
 var afficherCar5 = function (texte) {
-    return "Ces exercices sont super!".charAt(4);
+    return texte.charAt(4);
     // Ok
 }
 var afficher9Car = function (texte) {
-    var a = "Je dirait";
-    return a.substr(0, 9);
+    return texte.substr(0, 9);
     // Ok
 }
 var majusculeString = function (texte) {
-    var a = "Un autre excellent exercice";
-    return a.toUpperCase();
+    return texte.toUpperCase();
     // Ok
 }
 var minusculeString = function (texte) {
-    var a = "CELUI CI AUSSI!";
-    return a.toLowerCase();
+    return texte.toLowerCase();
     // Ok
 }
 var SupprEspaceString = function (texte) {
-    var a = " Rome ne s'est pas construite en un jour ";
-    return a.trim();
+    return texte.trim();
     // Ok
 }
 var IsString = function (texte) {
-    var a = "Hello";
+    
 }
 
 var AfficherExtensionString = function (texte) {
-    var a = "images/photo01.jpg";
-    return a.split('.').pop();
+    return texte.split('.').pop();
     // Ok
 }
 var NombreEspaceString = function (texte) {
-    var a = "Sire ouvrez on en a gros!";
-    return b = split(' ').length -1;
+    return texte.split(' ').length -1;
     // Ok
 }
 var InverseString = function (texte) {
-    var a = "Après demain, à partir d\'aujourd\'hui?";
 
 }
 
@@ -62,13 +55,19 @@ var InverseString = function (texte) {
  * Exercices sur les nombres et les caluls mathématiques
  */
 var calculPuissance = function (x, y) {
-
+    return Math.pow(x, y);
+    // Ok
 }
 var valeurAbsolue = function (nombre) {
-
+    return Math.abs(nombre);
+    // Ok
 }
 var valeurAbsolueArray = function (array) {
-
+    let result = [];
+    for (i = 0 ; i < array.length ; i++) {
+        result.push(Math.abs(array[i]));
+    }
+    return result;
 }
 var sufaceCercle = function (rayon) {
 
