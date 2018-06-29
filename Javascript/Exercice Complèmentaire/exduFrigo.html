@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice du frigo</title>
+  </head>
+  <body>
+
+    <ol id="liste">
+    </ol>
+
+    <ol id="listeDeCourse">
+    </ol>
+
+</body>
+  <script>
+
+    let frigo = [
+    {name:"Coca-Cola", type: "boisson", stateInPercent: 85},
+    {name:"Jus de Pommes", type: "boisson", stateInPercent: 100 },
+    {name:"Jus de Pommes Bio", type: "boisson", stateInPercent: 100 },
+    {name:"Confiture de Fraise Materne", type: "nourriture", stateInPercent: 0 },
+    {name:"Sandwich", type: "nourriture", stateInPercent: 10 },
+    {name:"Sandwich", type: "nourriture", stateInPercent: 100 },
+    {name:"Saucisson", type: "nourriture", stateInPercent: 23 },
+    {name:"Laitue bio", type: "nourriture", stateInPercent: 100 },
+    {name:"Oeufs bio", type: "nourriture", stateInPercent: 57 },
+    {name:"Nurofen Enfants", type: "medicament", stateInPercent: 78 }
+    ];
+
+    function listeFrigo () {
+        console.log(frigo);
+    for (var i = 0; i < frigo.length; i++) {
+        var liste = document.getElementById("liste");
+        console.log(frigo[i].name);
+        var newLi =  document.createElement("li");
+        newLi.innerHTML = frigo[i].name;
+        liste.appendChild(newLi);
+        }
+    }
+
+    function remplace () {
+        for (var i = 0; i < frigo.length; i++) {
+            var listeCourse = document.getElementById("listeDeCourse");
+            console.log(frigo[i].stateInPercent);
+
+        if (frigo[i].stateInPercent < 100) {
+            var newLi2 = document.createElement("li");
+            newLi2.innerHTML = frigo[i].stateInPercent;
+            listeDeCourse.appendChild(newLi2);
+            }
+        }
+    }
+
+    listeFrigo ();
+    remplace ();
+  </script>
+</html>
