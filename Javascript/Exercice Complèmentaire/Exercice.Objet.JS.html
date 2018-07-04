@@ -9,12 +9,14 @@
 </body>
   <script>
 
+
     // Exercice PNJ
       
+
     let character = {
-    "name" : "Monsieur Patate",
-    "age" : 35,
-    "item_to_give" : ["Un pendentif", "une amulet", "un anneau"],
+    name : "Monsieur Patate",
+    age : 35,
+    item_to_give : ["Un pendentif", "une amulet", "un anneau"],
     afficher : function () {
         for (x in character) {
             console.log(x);
@@ -28,13 +30,34 @@
 character.afficher();
 character.giveItem();
 
+
     // Exercice Shop
 
-    let objetàVendre = {"title" : "Epée du Grand Tagazok", "physic" : 15, "magic" : 5, "minLevel" : 7, "available" : true},
-        {"title" : "La Hache de Grock le cogneur", "physic" : 30, "magic" : 0, "minLevel" : 10, "available" : true},
+    let objetaVendre = [
+      {title : "Epée du Grand Tagazok", physic : 15, magic : 5, minLevel : 7, available : true},
+      {title : "La Hache de Grock le cogneur", physic : 30, magic : 0, minLevel : 12, available : true},
+      {title : "Le Sceptre de Stormflax le magicin maléfique", physic : 5, magic : 35, minLevel : 15, available : false},
+      {title : "L'arc impitoyablement précis", physic : 40, magic : 10, minLevel : 16, available : true},
+      ];
+
+
+      function afficherObject () {
+        for (x in title) {
+            console.log(x);
+        }
+      }
+
+objectaVendre.afficherObject();
 
 
     // Exercice Personnage
+
+    let mainCharacter = {
+    name : "Alby",
+    level : 17,
+    life : 150,
+
+    }
 
 
 
