@@ -68,13 +68,18 @@ var valeurAbsolueArray = function (array) {
         result.push(Math.abs(array[i]));
     }
     return result;
+    // Ok
 }
 var sufaceCercle = function (rayon) {
-
+    let resultatRayon = rayon * 2;
+    let surface = 3.14 * resultatRayon * resultatRayon;
+    return Math.round(surface);
 }
 var hypothenuse = function (ab, ac) {
+    let b = 2;
 
 }
 var calculIMC = function (poids, taille) {
-
+    let IMC = (poids / (taille * taille));
+    return IMC.toFixed(2);
 }
