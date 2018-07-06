@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+  </head>
+  <body>
+      <img src="images/image1.jpg" id="image1"/>
+
+  <script>
+      let move = document.getElementById("image1");
+        move.addEventListener("mouseover", function() {
+            document.getElementById("image1").style.border = "3px solid red";
+      });
+
+      move.addEventListener("mouseout", function() {
+          document.getElementById("image1").style.border = "none";
+      });
+  </script>
+  </body>
+</html>
