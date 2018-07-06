@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse" />
+    <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" />
+    <button type="button" name="button" >Vérification</button>
+  </form>
+<script>
+    let passeword = "" ;
+    let passconfirm = "" ;
+    let button = document.getElementsByName("button");
+        button[0].addEventListener("click", function() {
+            passeword = document.getElementById("motdepasse").value;
+            passconfirm = document.getElementById("confirmation").value;
+            if (passeword === passconfirm) {
+                document.getElementById("motdepasse").style.border = "1px solid green";
+                document.getElementById("confirmation").style.border = "1px solid green";
+            } else {
+                document.getElementById("motdepasse").style.border = "1px solid red";
+                document.getElementById("confirmation").style.border = "1px solid red";
+            }
+        });
+</script>
+</body>
+</html>
