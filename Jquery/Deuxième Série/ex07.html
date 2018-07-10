@@ -42,12 +42,15 @@
 		<script>
 			$(document).ready(function(){
 				/* agrandir la police de caractères (120%) */
-				
-				
+				$("ol li:first").click(function() {
+					$("ol li:first").css("font-size", "120%");
+				});
 				/* diminuer la police de caractères (80%) */
-		
-				
+				$("#instructions :eq(1)").click(function() {
+					$("#instructions :eq(1)").css("font-size", "80%");
+				});
 				/* mettre en gras ou remettre en normal les mots en vert */
+				
 				
 				/* souligner ou remettre en normal les mots en rouge */
 			
@@ -56,6 +59,7 @@
 				
 				
 				/* Afficher l'URL des liens dans une infobulle lors du survol des liens */
+
 				
 				/* ajouter "Chapitre 1 :" devant le 1er titre h2<br>et "Chapitre 2 :" devant le 2ème titre h2 */
 				
