@@ -50,13 +50,17 @@
 					$("#instructions :eq(1)").css("font-size", "80%");
 				});
 				/* mettre en gras ou remettre en normal les mots en vert */
-				
-				
+				$(".vert").click(function() {
+					$(".vert").css("font-weight", "bold");
+				})
 				/* souligner ou remettre en normal les mots en rouge */
-			
-				
+				$(".rouge").click(function() {
+					$(".rouge").css("color", "black");
+				})
 				/* remplacer le logo par une autre image au survol */
-				
+				$("#contenu img:first").mouseover(function() {
+					$("#contenu img:first").attr(src, koala.jpg);
+				});
 				
 				/* Afficher l'URL des liens dans une infobulle lors du survol des liens */
 
