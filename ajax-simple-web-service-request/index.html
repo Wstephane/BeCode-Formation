@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ajax Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+
+function getXMLHttpRequest() {
+
+var xhr = null;
+
+if (window.XMLHttpRequest || window.ActiveXObject) {
+    if (window.ActiveXObject) {
+        try {
+            xhr = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch(e) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    } else {
+        xhr = new XMLHttpRequest(); 
+    }
+} else {
+    alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
+    return null;
+}
+return xhr;
+}
+
+function request(callback) {
+        let xhr = new XMLHttpRequest;
+        xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+        callback(xhr.responseXML);
+        }
+    }
+};
+
+function request(callback) {
+
+var xhr = getXMLHttpRequest();
+
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+        callback(xhr.responseText);
+    }
+};
+
+xhr.open("GET", "https://thatsthespir.it/api", true);
+xhr.send(null);
+
+}
+
+function readData(oData) {
+
+if (oData == 200) {
+    
+    var newQuote = document.createElement("Blockquote");
+    newQuote.id = "BlockQuote1"
+    document.body.appendChild(newQuote);
+
+} else {
+    alert("Y'a eu un problème");
+    }
+}
+
+request(readData);
+
+</script>
+</body>
+</html>
