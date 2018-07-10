@@ -1,10 +1,16 @@
-var svg = dimple.newSvg("#chartContainer", 590, 400);
-    d3.tsv("/data/example_data.tsv", function (data) {
+
+
+
+
+var svg = dimple.newSvg("#table", 590, 400);
+    d3.tsv("assets/Crimes_recorded_by_the_police,_2002-12_YB14-fr.png", function (data) {
+      data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
       var myChart = new dimple.chart(svg, data);
-      myChart.setBounds(75, 30, 480, 330)
-      myChart.addMeasureAxis("x", "Unit Sales");
-      var y = myChart.addCategoryAxis("y", "Month");
-      y.addOrderRule("Date");
-      myChart.addSeries(null, dimple.plot.bar);
+      myChart.setBounds(60, 30, 505, 305);
+      var x = myChart.addCategoryAxis("x", "Month");
+      x.addOrderRule("Date");
+      myChart.addMeasureAxis("y", "Unit Sales");
+      var s = myChart.addSeries("Channel", dimple.plot.area);
+      myChart.addLegend(60, 10, 500, 20, "right");
       myChart.draw();
     });
