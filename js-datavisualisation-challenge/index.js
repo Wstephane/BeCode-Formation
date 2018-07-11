@@ -1,7 +1,11 @@
 var t = document.getElementById("table1");
-var trh = t.getElementsByTagName("tr");
+var tbody = t.getElementsByTagName("tr");
 var tableau = [];
-for(var i = 2 )
+for(var i = 2; i < tbody.length; i++) {
+  for (var j = 2; i < tbody[0].length; j++) {
+
+  }
+}
 
 
 
