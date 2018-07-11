@@ -50,15 +50,15 @@
 					$("#instructions :eq(1)").css("font-size", "80%");
 				});
 				/* mettre en gras ou remettre en normal les mots en vert */
-				$(".vert").click(function() {
+				$("#instructions :eq(2)").click(function() {
 					$(".vert").css("font-weight", "bold");
-				})
+				});
 				/* souligner ou remettre en normal les mots en rouge */
-				$(".rouge").click(function() {
+				$("#instructions :eq(3)").click(function() {
 					$(".rouge").css("color", "black");
-				})
+				});
 				/* remplacer le logo par une autre image au survol */
-				$("#contenu img:first").mouseover(function() {
+				$("#instructions :eq(4)").mouseover(function() {
 					$("#contenu img:first").attr(src, koala.jpg);
 				});
 				
