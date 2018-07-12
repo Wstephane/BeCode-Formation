@@ -20,7 +20,11 @@ for(var i = 2; i < tbody.length; i++) {
   }
 }
 
+// Création de la Div
+
 $("#table1").before('<div id="chart1"></div>');
+
+// Graphique
 
 var svg = dimple.newSvg("#chart1", "100%", 500);
 var myChart = new dimple.chart(svg, tableau);
@@ -36,11 +40,9 @@ var myLegend = myChart.addLegend(0, 5, 950, 200);
 myLegend.fontSize = "auto";
 myChart.draw();
 
-
 // Deuxième Graphique
 
 // Parcour du tableau 2
-
 
 var a = document.getElementById("table2");
 var row = a.getElementsByTagName("tr");
@@ -60,7 +62,11 @@ for(var i = 1; i < row.length; i++) {
   }
 }
 
+// Création de la Div
+
 $("#table2").before('<div id="chart2"></div>');
+
+// Graphique
 
 var svg2 = dimple.newSvg("#chart2", "100%", 600);
 var myChart2 = new dimple.chart(svg2, tableau2);
@@ -75,7 +81,25 @@ myChart2.addSeries("pays", dimple.plot.bar);
 myChart2.addLegend(60, 0, 950, 400,);
 myChart2.draw();
 
-
-
 // Graphique et requet AJAX
+
+$("#firstHeading").after('<div id="chart3"></div>');
+
+var dataPoints = [];
+$.getJSON("https://inside.becode.org/api/v1/data/random.json", function(data) {  
+    $.each(data, function(key, value){
+        dataPoints.push({x: value[0], y: parseInt(value[1])});
+    });
+    myChart3 = new dimple.chart("chart3",{
+        title:{
+            text:"Live Chart with dataPoints from External JSON"
+        },
+        data: [{
+        type: "line",
+        dataPoints : dataPoints,
+        }]
+    });
+    myChart.render();
+    updateChart();
+});
 
