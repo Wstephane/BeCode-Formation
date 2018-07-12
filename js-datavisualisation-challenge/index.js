@@ -25,10 +25,15 @@ $("#table1").before('<div id="chart1"></div>');
 var svg = dimple.newSvg("#chart1", 900, 500);
 var myChart = new dimple.chart(svg, tableau);
 // myChart.setBounds(60, 150, 300, 305);
-myChart.addCategoryAxis("x", "annee");
-myChart.addMeasureAxis("y", "valeur");
+var myAxisX = myChart.addCategoryAxis("x", ["annee", "pays"]);
+myAxisX.title = "Année";
+myAxisX.fontSize = "auto";
+var myAxisY = myChart.addMeasureAxis("y", "valeur");
+myAxisY.title = "Nombre en millier";
+myAxisY.fontSize = "auto";
 myChart.addSeries("pays", dimple.plot.line);
-myChart.addLegend(0, 10, 700, 200, "right");
+var myLegend = myChart.addLegend(0, 5, 1200, 200, "center");
+myLegend.fontSize = "auto";
 myChart.draw();
 
 
@@ -47,10 +52,9 @@ for(var i = 1; i < row.length; i++) {
     if(parseInt(val[j].innerHTML)){
       obj2 = {
         "pays" : val[0].innerHTML,
-        "annee" : row[1].getElementsByTagName("th")[j].innerHTML,
-        "valeur" : parseInt(val[j+1].innerHTML),
+        "annee" : row[0].getElementsByTagName("th")[j+1].innerHTML,
+        "valeur" : parseInt(val[j].innerHTML),
       }
-      console.log(obj2);
       tableau2.push(obj2);
     }
   }
@@ -58,11 +62,15 @@ for(var i = 1; i < row.length; i++) {
 
 $("#table2").before('<div id="chart2"></div>');
 
-var svg = dimple.newSvg("#chart2", 900, 500);
-var myChart = new dimple.chart(svg, tableau);
-// myChart.setBounds(60, 150, 300, 305);
-myChart.addCategoryAxis("x", "annee");
-myChart.addMeasureAxis("y", "valeur");
-myChart.addSeries("pays", dimple.plot.line);
-myChart.addLegend(0, 10, 700, 200, "right");
-myChart.draw();
+var svg2 = dimple.newSvg("#chart2", "100%", 600);
+var myChart2 = new dimple.chart(svg2, tableau2);
+// myChart2.setBounds(60, 185, 310, 270)
+var myAxisX = myChart2.addCategoryAxis("x", ["pays", "annee"]);
+myAxisX.title = "Année";
+myAxisX.fontSize = "auto";
+var myAxisY = myChart2.addMeasureAxis("y", "valeur");
+myAxisY.title = "Nombre";
+myAxisY.fontSize = "auto";
+myChart2.addSeries("pays", dimple.plot.bar);
+myChart2.addLegend(60, 10, 950, 400,);
+myChart2.draw();
