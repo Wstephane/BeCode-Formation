@@ -22,9 +22,9 @@ for(var i = 2; i < tbody.length; i++) {
 
 $("#table1").before('<div id="chart1"></div>');
 
-var svg = dimple.newSvg("#chart1", 900, 500);
+var svg = dimple.newSvg("#chart1", "100%", 500);
 var myChart = new dimple.chart(svg, tableau);
-// myChart.setBounds(60, 150, 300, 305);
+myChart.setBounds(50, 85, "90%", 350);
 var myAxisX = myChart.addCategoryAxis("x", ["annee", "pays"]);
 myAxisX.title = "Année";
 myAxisX.fontSize = "auto";
@@ -32,7 +32,7 @@ var myAxisY = myChart.addMeasureAxis("y", "valeur");
 myAxisY.title = "Nombre en millier";
 myAxisY.fontSize = "auto";
 myChart.addSeries("pays", dimple.plot.line);
-var myLegend = myChart.addLegend(0, 5, 1200, 200, "center");
+var myLegend = myChart.addLegend(0, 5, 950, 200);
 myLegend.fontSize = "auto";
 myChart.draw();
 
@@ -64,13 +64,18 @@ $("#table2").before('<div id="chart2"></div>');
 
 var svg2 = dimple.newSvg("#chart2", "100%", 600);
 var myChart2 = new dimple.chart(svg2, tableau2);
-// myChart2.setBounds(60, 185, 310, 270)
+myChart2.setBounds(50, 120, "90%", 350);
 var myAxisX = myChart2.addCategoryAxis("x", ["pays", "annee"]);
-myAxisX.title = "Année";
+myAxisX.title = "Pays";
 myAxisX.fontSize = "auto";
 var myAxisY = myChart2.addMeasureAxis("y", "valeur");
 myAxisY.title = "Nombre";
 myAxisY.fontSize = "auto";
 myChart2.addSeries("pays", dimple.plot.bar);
-myChart2.addLegend(60, 10, 950, 400,);
+myChart2.addLegend(60, 0, 950, 400,);
 myChart2.draw();
+
+
+
+// Graphique et requet AJAX
+
