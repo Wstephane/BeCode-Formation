@@ -81,25 +81,45 @@ myChart2.addSeries("pays", dimple.plot.bar);
 myChart2.addLegend(60, 0, 950, 400,);
 myChart2.draw();
 
-// Graphique et requet AJAX
+// Troisième Graphique
+
+// Création de la div
 
 $("#firstHeading").after('<div id="chart3"></div>');
 
-var dataPoints = [];
-$.getJSON("https://inside.becode.org/api/v1/data/random.json", function(data) {  
-    $.each(data, function(key, value){
-        dataPoints.push({x: value[0], y: parseInt(value[1])});
-    });
-    myChart3 = new dimple.chart("chart3",{
-        title:{
-            text:"Live Chart with dataPoints from External JSON"
-        },
-        data: [{
-        type: "line",
-        dataPoints : dataPoints,
-        }]
-    });
-    myChart.render();
-    updateChart();
-});
+// Graphique
 
+var svg = dimple.newSvg("#chart3", "100%", 370);
+var myChart3 = new dimple.chart(svg, []);
+myChart3.setBounds(60, 30, "90%", 305)
+var x = myChart3.addCategoryAxis("x", "number");
+myChart3.addMeasureAxis("y", "variable");
+myChart3.addSeries("plop", dimple.plot.bubble);
+
+// Requête AJAX
+
+var tableau3 = [];
+
+function call () {
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://inside.becode.org/api/v1/data/random.json");
+  xhr.onload = function () {
+      var ourData = JSON.parse(xhr.responseText);
+
+  for(var i = 0 ; i < ourData.length; i++) {
+      obj3 = {
+        number : ourData[i][0],
+        variable : ourData[i][1],
+      }
+      tableau3.push(obj3);
+  }
+}
+xhr.send();
+
+myChart3.data = tableau3;
+myChart3.draw();
+setTimeout(function(){call()}, 1000);
+}
+
+call();
