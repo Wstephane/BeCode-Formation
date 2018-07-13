@@ -1,6 +1,6 @@
 # Challenge JavaScript de Datavisualisation
 
-Fais du *06/07/2018 aux 13/07/2018* par Stéphane Wyns dans le cadre de la formation *BeCode* en début de formation.
+Fait du *06/07/2018 au 13/07/2018* par Stéphane Wyns dans le cadre de la formation *BeCode* en début de formation.
 
 Le premier but du projet était d'apprendre à faire des graphiques en utilisant une libraire qui faciliterait la chose que de le faire en JS vanilla.
 
@@ -26,7 +26,7 @@ Notre challenge consistait à faire deux graphiques différents avec les donnée
 
 Notre choix de librairie se limitait à [D3] (https://d3js.org/) ou sur sa version simplifiée [Dimple] (http://dimplejs.org/).
 
-Notre contraints étaient que nous ne pouvions pas toucher à l'HTML qui nous étaient fournis et ainsi faire toutes les manipulations en JS.
+Notre contrainte était que nous ne pouvions pas toucher à l'HTML qui nous était fourni et ainsi faire toutes les manipulations en JS.
 
 
 ## Ce que j'ai appris :
