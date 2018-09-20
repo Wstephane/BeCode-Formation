@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './component/header';
+import Main from './component/main';
+import Partielosange from './component/partielosange';
+import Picture from './component/picture';
+import Login from './component/login';
+import Social from './component/social';
 
-class App extends Component {
+
+
+export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>Hello, I love the world !!!</p>
+        <Header />
+        <Main />
+        <Partielosange />
+        <Picture />
+        <Login />
+        <Social />
       </div>
     );
   }
 }
-
-export default App;

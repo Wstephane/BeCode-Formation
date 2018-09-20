@@ -1,28 +1,37 @@
 .App {
-  text-align: center;
+    background-color: blue;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Header {
+    background-color: aliceblue;
+    color: black;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.Moza {
+    background-color: blueviolet;
+    color: rgb(102, 255, 0);
 }
 
-.App-title {
-  font-size: 1.5em;
+.Logoprincipale {
+    background-color: azure;
+    color:red;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 
-.App-intro {
-  font-size: large;
+.Picture {
+    background-color: chartreuse;
+    color: deeppink;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Login {
+    background-color: forestgreen;
+    color: black;
+}
+
+.Social {
+    background-color: hotpink;
+    color: blue;
 }
