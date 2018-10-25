@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercice Challenge du jour 1</title>
+    </head>
+    <body>
+            <h1>Exercice du jour 1</h1>
+            <ul>
+                <li>Niveau 1 : Créer un algorithme qui génére un tableau de 100 chiffres entre 0 et 1000 (random).</li>
+                <li>Niveau 2 : Trier ce tableau par ordre de grandeur.</li>
+                <li>Niveau 3 : Trier le tableau de la manière suivante ([le chiffre le plus petit, le chiffre le plus grand, le deuxième plus petit, le deuxième plus grand, ..., ...,])</li>
+            </ul>
+            
+            <p>Toutes techno's confondues</p>
+            
+        <script>
+            let tableau = [];
+            let tableaufinal = [];
+
+            function nombreRandom () {
+                return Math.floor(Math.random()*1000);
+            }
+
+            for (let i = 0; i < 100; i++) {
+                tableau.push(nombreRandom());
+            }
+            console.log(tableau);
+
+            function sortNumber(a,b) {
+                return a - b;
+            }
+            tableau.sort(sortNumber);
+            console.log(tableau);
+
+            function separationNombre () {
+                for (let i = 0; i < tableau.length; i++ -1) {
+                    tableau.push(separationNombre());
+                    tableaufinal.push();
+                }
+            }
+            console.log(tableau);
+        </script>
+    </body>
+</html>
