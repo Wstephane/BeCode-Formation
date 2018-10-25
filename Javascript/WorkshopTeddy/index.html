@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <script>
+
+            // var variable_var = "Hello world";
+            // let variable_let = "Holla mundo";
+            // const variable_const = "Bonjour le monde";
+
+            // for (const i = 0; i > 10; i++ ) {
+            //     console.log(i);
+            // };
+
+            // function addition () {
+            //     console.log("j'aime les additions");
+            // }
+
+            // // function soustraction () {
+            // //     console.log("j'aime les soustraction");
+            // // }
+
+            // let soustraction = function () {
+            //     console.log("j'aime les soustraction");
+            // }
+
+            // console.log(soustraction);
+
+            // addition();
+            // soustraction();
+
+
+            // var aaaa ="aaaaa";
+
+            // console.log(this);
+
+            // let bonjour = function () {
+            //     this.bbbbb ="bbbbb";
+
+            //     console.log(aaaa);
+            //     console.log(this.aaaa);
+            //     console.log(bbbbb);
+            //     console.log(this.bbbbb);
+            // }
+
+            // bonjour();
+
+            function Human(name, color, age) {
+                let self = this;
+                let _private = "secret";
+                this.name = name;
+                this.color = color;
+                this.age = age;
+                this.languages = "fr";
+            }
+
+            Human.prototype.sayHello = function(name) {
+                console.log("hello" + this.name);
+            }
+
+            let mario = new Human("mario", "rouge", 30);
+            let luigi = new Human("luigi", "vert", 25);
+
+            console.log( mario )
+            console.log ( luigi )
+            console.log ( luigi.name )
+
+            // let msg = "bonjour";
+
+            // console.log( msg );
+            // console.log ( typeof msg);
+
+            // let myString = new String("aurevoir");
+
+            // console.dir( myString)
+            // console.log( typeof myString)
+
+            // console.log( myString.indexOf("e") )
+
+            // console.log( "hello".indexOf("e"))
+            // console.log( ["h","e","l","l","o"].indexOf("e"))
+
+            // console.dir( new Number() );
+
+            function Vampire(name, color, age) {
+                Human.call(this, name, color, age);
+                this.power = "bite";
+            }
+
+            Vampire.prototype = Object.create(Human.prototype);
+
+            let wario = new Vampire("Warior", "Jaune", 40);
+
+            console.log( wario );
+            console.log( wario.sayHello());
+
+
+        </script>
+
+</body>
+</html>
