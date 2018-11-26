@@ -1,2 +1,2 @@
 # BeCode-Formation
-Mes excercices et projets fait chez BeCode
+Mes excercices fait pendant la formation BeCode
